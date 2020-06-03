@@ -76,6 +76,9 @@ normal. Please just don't worry.
     <img width=15% height="auto" src="resources/rl_1.png" alt="rl_1" />
     <img width=15% height="auto" src="resources/rl_2.png" alt="rl_2" />
     <img width=15% height="auto" src="resources/rl_3.png" alt="rl_3" />
+    <img width=15% height="auto" src="resources/rl_4.png" alt="rl_3" />
+    <img width=15% height="auto" src="resources/rl_5.png" alt="rl_3" />
+    <img width=15% height="auto" src="resources/rl_6.png" alt="rl_3" />
 </p>
 
 <p align="center">
