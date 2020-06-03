@@ -23,58 +23,69 @@ Overview
 
 <p align="center">
 <strong align="center">
-In the paper, we show the connection between mutual information and softmax
-classifier through variational form of mutual information. The 
-connection explains the rational behind softmax cross-entropy from 
-information-theoretic perspective, which brings a new insight to 
-understand the classifiers. We utilise the connection between 
-classification and mutual information to improve the weakly-supervised 
-object localisation task. To this end, we propose a new way to 
-compute the classification activation map, which is based on the 
-difference between PMIs. 
+This repository contains a PyTorch implementation of MolGAN: An implicit generative model for small molecular graphs 
+(https://arxiv.org/abs/1805.11973). 
 </strong>
 </p>
+
+## Usage
+You can either run MolGAN or MolVAE. Please download and preprocess the dataset before training molGAN. 
+### Data Download 
+Just simply run a bash script. 
+You can find such a bash script in the data 
+directory. 
+If you see warnings or even errors, 
+please just don't worry. 
+
+If you wish to use the QM9 dataset, 
+you can skip the data downloading and 
+directed proceed to data preprocessing. 
+```bash
+bash download_dataset.sh
+```
+### Data Preprocessing 
+Just run the python script below. 
+You will need to comment different different code 
+sections in the main function. 
+It is too easy to figure out how to do. 
+```bash
+python sparse_molecular_dataset.py
+```
+### MolGAN
+Simply run the following command to train. 
+```bash
+python main_gan.py
+```
+### MolVAE
+For your convenience, 
+a VAE version is also implemented. 
+```bash
+python main_vae.py
+```
+### Testing
+You will need to change some arguments 
+in ``args.py`` to test the saved model. 
+It is too easy and I believe you can figure out 
+how to do it. 
+### Kind Reminder
+If you witness low or even zero validity for 
+generated molecules during training, that is 
+normal. Please just don't worry. 
 
 <p align="center">
-<strong align="center">
-This repository includes all the experimental implementation.
-</strong>
+    <img width=30% height="auto" src="resources/rl_1.png" alt="rl_1" />
+    <img width=30% height="auto" src="resources/rl_2.png" alt="rl_2" />
+    <img width=30% height="auto" src="resources/rl_3.png" alt="rl_3" />
 </p>
-
-## MI Estimator
-In the paper, we prove that classification neural networks that 
-optimise their weights to minimise the softmax cross-entropy are 
-equivalent to the ones that maximise mutual information between 
-inputs and labels with the balanced datasets. This repository 
-includes the implementation for evaluating the effectiveness of 
-classification mutual information estimator via synthetic 
-datasets. We also show the balanced dataset assumption can be 
-relaxed by modifying the traditional softmax to the 
-Probability-Correct (PC) softmax. This repository also contains 
-implementation for evaluating mutual information with PC-softmax
-on the synthetic dataset. 
-
-## PC Softmax
-We modify the traditional softmax to the 
-Probability-Correct (PC) softmax. This repository contains 
-implementation for demonstrating PC-softmax can improve a large
-margin than the traditional softmax for the average of the per-class 
-classification accuracy. We experiment on two datasets: MNIST and
-CUB-200-2011. In terms of the accuracy value merely, we achieve a new 
-state-of-art of the micro classification accuracy 
-(ours: 89.73; previous: 89.6) on CUB-200-2011. 
-
-## InfoCAM 
-We propose infoCAM: Informative Class Activation Map, which 
-highlights regions of the input image that are the most relevant to a 
-given label based on differences in information. The activation 
-map helps localise the target object in an image. We in this 
-repository show the effectiveness of the informative-theoretic 
-approach than the traditional CAM. 
 
 <p align="center">
     <img width=100% height="auto" src="resources/all-birds.png" alt="InfoCAM" />
 </p>
+
+## Dependencies 
+I use PyTorch 1.5. There is no magic for installing 
+packages. You can just install all the required 
+packages if you run into ``no-such-package`` issues :-) 
 
 ## Credits
 This repository uses the following implementations: 
