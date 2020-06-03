@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="250" height="auto" src="resources/tai-chi.png" />
+    <img width="250" height="auto" src="resources/molecule.png" />
     <br>
     Rethinking Softmax with Cross-Entropy
     <br>
@@ -8,9 +8,6 @@
 <h2 align="center">
 Neural Network Classifier as Mutual Information Estimator
 </h2>
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rethinking-softmax-with-cross-entropy-neural/fine-grained-image-classification-on)](https://paperswithcode.com/sota/fine-grained-image-classification-on?p=rethinking-softmax-with-cross-entropy-neural)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rethinking-softmax-with-cross-entropy-neural/weakly-supervised-object-localization-on-tiny)](https://paperswithcode.com/sota/weakly-supervised-object-localization-on-tiny?p=rethinking-softmax-with-cross-entropy-neural)
 
 <p align="center">
   <a href="#mi-estimator">MI Estimator</a> •
