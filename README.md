@@ -72,6 +72,8 @@ If you witness low or even zero validity for
 generated molecules during training, that is 
 normal. Please just don't worry. 
 
+## Molecule Generation Exhibition
+### Pure RL (WGAN-Lambda = 0.0)
 <p align="center">
     <img width=15% height="auto" src="resources/rl_1.png" alt="rl_1" />
     <img width=15% height="auto" src="resources/rl_2.png" alt="rl_2" />
@@ -81,6 +83,45 @@ normal. Please just don't worry.
     <img width=15% height="auto" src="resources/rl_6.png" alt="rl_6" />
 </p>
 
+### Mixture of RL and GAN (WGAN-Lambda = 0.5)
+<p align="center">
+    <img width=15% height="auto" src="resources/wla_p5_1.png" alt="wla_p5_1" />
+    <img width=15% height="auto" src="resources/wla_p5_2.png" alt="wla_p5_2" />
+    <img width=15% height="auto" src="resources/wla_p5_3.png" alt="wla_p5_3" />
+    <img width=15% height="auto" src="resources/wla_p5_4.png" alt="wla_p5_4" />
+    <img width=15% height="auto" src="resources/wla_p5_5.png" alt="wla_p5_5" />
+    <img width=15% height="auto" src="resources/wla_p5_6.png" alt="wla_p5_6" />
+</p>
+
+### Pure GAN (WGAN-Lambda = 1.0)
+<p align="center">
+    <img width=15% height="auto" src="resources/pure_gan_1.png" alt="pure_gan_1" />
+    <img width=15% height="auto" src="resources/pure_gan_2.png" alt="pure_gan_2" />
+    <img width=15% height="auto" src="resources/pure_gan_3.png" alt="pure_gan_3" />
+    <img width=15% height="auto" src="resources/pure_gan_4.png" alt="pure_gan_4" />
+    <img width=15% height="auto" src="resources/pure_gan_5.png" alt="pure_gan_5" />
+    <img width=15% height="auto" src="resources/pure_gan_6.png" alt="pure_gan_6" />
+</p>
+
+### MolVAE Reconstruction
+<p align="center">
+    <img width=15% height="auto" src="resources/vae_rec_1.png" alt="vae_rec_1" />
+    <img width=15% height="auto" src="resources/vae_rec_2.png" alt="vae_rec_2" />
+    <img width=15% height="auto" src="resources/vae_rec_3.png" alt="vae_rec_3" />
+    <img width=15% height="auto" src="resources/vae_rec_4.png" alt="vae_rec_4" />
+    <img width=15% height="auto" src="resources/vae_rec_5.png" alt="vae_rec_5" />
+    <img width=15% height="auto" src="resources/vae_rec_6.png" alt="vae_rec_6" />
+</p>
+
+### MolVAE Sampling
+<p align="center">
+    <img width=15% height="auto" src="resources/sample_1.png" alt="sample_1" />
+    <img width=15% height="auto" src="resources/sample_2.png" alt="sample_2" />
+    <img width=15% height="auto" src="resources/sample_3.png" alt="sample_3" />
+    <img width=15% height="auto" src="resources/sample_4.png" alt="sample_4" />
+    <img width=15% height="auto" src="resources/sample_5.png" alt="sample_5" />
+    <img width=15% height="auto" src="resources/sample_6.png" alt="sample_6" />
+</p>
 
 ## Dependencies 
 I use PyTorch 1.5. There is no magic for installing 
