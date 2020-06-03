@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="250" height="auto" src="resources/molecule.png" />
+    <img width="200" height="auto" src="resources/molecule.png" />
     <br>
     Rethinking Softmax with Cross-Entropy
     <br>
