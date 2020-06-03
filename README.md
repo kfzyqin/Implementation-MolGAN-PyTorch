@@ -6,9 +6,9 @@
 </h1>
 
 <p align="center">
-  <a href="#mi-estimator">MI Estimator</a> •
-  <a href="#pc-softmax">PC Softmax</a> •
-  <a href="#InfoCAM">InfoCAM</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#exhibition">Exhibition</a> •
+  <a href="#citation">Citation</a> •
   <a href="#credits">Credits</a> •
   <a href="#licence">Licence</a>
 </p>
@@ -128,11 +128,30 @@ I use PyTorch 1.5. There is no magic for installing
 packages. You can just install all the required 
 packages if you run into ``no-such-package`` issues :-) 
 
+## Contacts
+If you have any questions regarding this implementation. Please lodge Github issues. 
+You can also contact Zhenyue Qin (zhenyue.qin@anu.edu.au). 
+I aim to respond emails as soon as I see them :-)  
+
+## Citation
+Apart from citing the MolGAN paper, please also consider citing this Github page 
+if you find this implementation assists you :-) 
+```
+@misc{qin2020molgan_pytorch,
+  author = {Qin, Zhenyue},
+  title = {MolGAN Pytorch Implementaion},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ZhenyueQin/Implementation-MolGAN-PyTorch}}
+}
+```
+
 ## Credits
 This repository uses the following implementations: 
-- [Fine-Grained Inception-V3](https://github.com/richardaecn/cvpr18-inaturalist-transfer)
-- [ADL](https://github.com/junsukchoe/ADL/tree/master/Pytorch)
-- [PyTorch-Example](https://github.com/pytorch/examples/tree/master/mnist)
+- [MolGAN PyTorch by YongQyu](https://github.com/yongqyu/MolGAN-pytorch)
+- [MolGAN TF](https://github.com/nicola-decao/MolGAN)
+- [Freeplk](https://www.flaticon.com/free-icon/molecule_2106435?term=molecule&page=1&position=58)
 
 ## Licence
 [CC-BY-4.0](https://choosealicense.com/licenses/cc-by-4.0/)
