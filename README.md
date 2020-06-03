@@ -6,15 +6,11 @@
 </h1>
 
 <p align="center">
-  <a href="#usage">Usage</a> •
-  <a href="#exhibition">Exhibition</a> •
-  <a href="#citation">Citation</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#licence">Licence</a>
-</p>
-
-<p align="center">
-    <img width=100% height="auto" src="resources/Info-CAM-Illustration.png" alt="InfoCAM-Procedure" />
+  <a href="#Usage">Usage</a> •
+  <a href="#Exhibition">Exhibition</a> •
+  <a href="#Citation">Citation</a> •
+  <a href="#Credits">Credits</a> •
+  <a href="#Licence">Licence</a>
 </p>
 
 <h3 align="center">
