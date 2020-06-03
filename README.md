@@ -1,13 +1,9 @@
 <h1 align="center">
     <img width="200" height="auto" src="resources/molecule.png" />
     <br>
-    Rethinking Softmax with Cross-Entropy
+    PyTorch Implementation of MolGAN
     <br>
 </h1>
-
-<h2 align="center">
-Neural Network Classifier as Mutual Information Estimator
-</h2>
 
 <p align="center">
   <a href="#mi-estimator">MI Estimator</a> •
