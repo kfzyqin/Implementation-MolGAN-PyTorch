@@ -76,14 +76,11 @@ normal. Please just don't worry.
     <img width=15% height="auto" src="resources/rl_1.png" alt="rl_1" />
     <img width=15% height="auto" src="resources/rl_2.png" alt="rl_2" />
     <img width=15% height="auto" src="resources/rl_3.png" alt="rl_3" />
-    <img width=15% height="auto" src="resources/rl_4.png" alt="rl_3" />
-    <img width=15% height="auto" src="resources/rl_5.png" alt="rl_3" />
-    <img width=15% height="auto" src="resources/rl_6.png" alt="rl_3" />
+    <img width=15% height="auto" src="resources/rl_4.png" alt="rl_4" />
+    <img width=15% height="auto" src="resources/rl_5.png" alt="rl_5" />
+    <img width=15% height="auto" src="resources/rl_6.png" alt="rl_6" />
 </p>
 
-<p align="center">
-    <img width=100% height="auto" src="resources/all-birds.png" alt="InfoCAM" />
-</p>
 
 ## Dependencies 
 I use PyTorch 1.5. There is no magic for installing 
