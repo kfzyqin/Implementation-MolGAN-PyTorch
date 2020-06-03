@@ -73,9 +73,9 @@ generated molecules during training, that is
 normal. Please just don't worry. 
 
 <p align="center">
-    <img width=30% height="auto" src="resources/rl_1.png" alt="rl_1" />
-    <img width=30% height="auto" src="resources/rl_2.png" alt="rl_2" />
-    <img width=30% height="auto" src="resources/rl_3.png" alt="rl_3" />
+    <img width=15% height="auto" src="resources/rl_1.png" alt="rl_1" />
+    <img width=15% height="auto" src="resources/rl_2.png" alt="rl_2" />
+    <img width=15% height="auto" src="resources/rl_3.png" alt="rl_3" />
 </p>
 
 <p align="center">
