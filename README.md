@@ -35,7 +35,7 @@ please just don't worry.
 
 If you wish to use the QM9 dataset, 
 you can skip the data downloading and 
-directed proceed to data preprocessing. 
+directly proceed to data preprocessing. 
 ```bash
 bash download_dataset.sh
 ```
@@ -69,6 +69,7 @@ generated molecules during training, that is
 normal. Please just don't worry. 
 
 ## Molecule Generation Exhibition
+These results are trained with the QM9 dataset. 
 ### Pure RL (WGAN-Lambda = 0.0)
 <p align="center">
     <img width=15% height="auto" src="resources/rl_1.png" alt="rl_1" />
