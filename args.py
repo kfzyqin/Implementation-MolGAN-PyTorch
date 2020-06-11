@@ -99,7 +99,7 @@ def get_VAE_config():
     # parser.add_argument('--mol_data_dir', type=str, default='data/gdb9_9nodes.sparsedataset')
 
     # Directories.
-    parser.add_argument('--saving_dir', type=str, default='../exp_results/VAE/')
+    parser.add_argument('--saving_dir', type=str, default='../exp_results/VAE_test/')
 
     # Step size.
     parser.add_argument('--log_step', type=int, default=10)
@@ -110,7 +110,7 @@ def get_VAE_config():
     # For training
     config = parser.parse_args()
     config.mode = 'train'
-    config.lambda_wgan = 0.75
+    config.lambda_wgan = 1.0
     config.g_lr = config.d_lr = 1e-4
     config.model_save_step = 1
     config.batch_size = 128
