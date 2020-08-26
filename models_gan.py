@@ -3,6 +3,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 from layers import GraphConvolution, GraphAggregation, MultiGraphConvolutionLayers, MultiDenseLayer
+from torch.nn.modules import TransformerEncoderLayer, TransformerEncoder
+
+from util_dir.utils_nn import PositionalEncoding
 
 
 class Generator(nn.Module):
@@ -36,7 +39,8 @@ class Generator(nn.Module):
 class Discriminator(nn.Module):
     """Discriminator network with PatchGAN."""
 
-    def __init__(self, conv_dim, m_dim, b_dim, with_features=False, f_dim=0, dropout_rate=0.):
+    def __init__(self, conv_dim, m_dim, b_dim, with_features=False, f_dim=0, dropout_rate=0.,
+                 to_use_tf=False):
         super(Discriminator, self).__init__()
         self.activation_f = torch.nn.Tanh()
         graph_conv_dim, aux_dim, linear_dim = conv_dim
@@ -48,10 +52,28 @@ class Discriminator(nn.Module):
 
         self.output_layer = nn.Linear(linear_dim[-1], 1)
 
+        # Transformer
+        self.to_use_tf = to_use_tf
+        if self.to_use_tf:
+        # if False:
+            nhead = 8
+            nlayers = 5
+            trans_dropout = 0.5
+            self.pos_encoder = PositionalEncoding(graph_conv_dim[-1])
+            encoder_layers = TransformerEncoderLayer(graph_conv_dim[-1], nhead, dropout=trans_dropout)
+            self.transformer_encoder = TransformerEncoder(encoder_layers, nlayers)
+
     def forward(self, adj, hidden, node, activation=None):
         adj = adj[:, :, :, 1:].permute(0, 3, 1, 2)
         h_1 = self.gcn_layer(node, adj, hidden)
+
+        if self.to_use_tf:
+            h_1 = h_1.permute(1, 0, 2)
+            h_1 = self.transformer_encoder(h_1)
+            h_1 = h_1.permute(1, 0, 2)
+
         h = self.agg_layer(h_1, node, hidden)
+
         h = self.multi_dense_layer(h)
 
         output = self.output_layer(h)

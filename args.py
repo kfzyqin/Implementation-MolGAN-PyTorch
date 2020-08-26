@@ -47,6 +47,9 @@ def get_GAN_config():
     parser.add_argument('--model_save_step', type=int, default=1)
     parser.add_argument('--lr_update_step', type=int, default=1000)
 
+    # Transformers
+    parser.add_argument('--to_use_tf', type=bool, default=False)
+
     # For training
     config = parser.parse_args()
     config.mode = 'train'
@@ -54,9 +57,12 @@ def get_GAN_config():
     config.lambda_gp = 10.0
     config.g_lr = config.d_rl = 1e-4
     config.n_critic = 5
-    config.num_epochs = 150
+    config.num_epochs = 30
     config.log_step = 1
     config.batch_size = 32
+
+    # Setting TF
+    config.to_use_tf = False
 
     # For testing
     # config.mode = 'test'
@@ -107,6 +113,9 @@ def get_VAE_config():
     parser.add_argument('--model_save_step', type=int, default=1)
     parser.add_argument('--lr_update_step', type=int, default=1000)
 
+    # Transformers
+    parser.add_argument('--to_use_tf', type=bool, default=False)
+
     # For training
     config = parser.parse_args()
     config.mode = 'train'
@@ -114,7 +123,10 @@ def get_VAE_config():
     config.g_lr = config.d_lr = 1e-4
     config.model_save_step = 1
     config.batch_size = 128
-    config.num_epochs = 150
+    config.num_epochs = 30
+
+    # Setting TF
+    config.to_use_tf = True
 
     # For testing
     # config.mode = 'test'

@@ -72,16 +72,22 @@ class Solver(object):
         # VAE KL weight.
         self.kl_la = 1.
 
+        # To use transformer
+        # self.to_use_tf = True
+        self.to_use_tf = config.to_use_tf
+
         # Build the model.
         self.build_model()
 
     def build_model(self):
         """Create an encoder and a decoder."""
         self.encoder = EncoderVAE(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.z_dim,
-                                  with_features=True, f_dim=self.f_dim, dropout_rate=self.dropout_rate).to(self.device)
+                                  with_features=True, f_dim=self.f_dim, dropout_rate=self.dropout_rate,
+                                  to_use_tf=self.to_use_tf).to(self.device)
         self.decoder = Generator(self.g_conv_dim, self.z_dim, self.data.vertexes, self.data.bond_num_types,
                                  self.data.atom_num_types, self.dropout_rate).to(self.device)
-        self.V = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout_rate).to(self.device)
+        self.V = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout_rate,
+                               to_use_tf=self.to_use_tf).to(self.device)
 
         self.vae_optimizer = torch.optim.RMSprop(list(self.encoder.parameters()) +
                                                  list(self.decoder.parameters()), self.g_lr)

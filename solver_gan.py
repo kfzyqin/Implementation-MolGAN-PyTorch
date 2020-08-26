@@ -69,6 +69,10 @@ class Solver(object):
         # Step size.
         self.model_save_step = config.model_save_step
 
+        # To use transformer
+        # self.to_use_tf = True
+        self.to_use_tf = config.to_use_tf
+
         # Build the model.
         self.build_model()
 
@@ -79,8 +83,10 @@ class Solver(object):
                            self.data.bond_num_types,
                            self.data.atom_num_types,
                            self.dropout)
-        self.D = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout)
-        self.V = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout)
+        self.D = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout,
+                               to_use_tf=self.to_use_tf)
+        self.V = Discriminator(self.d_conv_dim, self.m_dim, self.b_dim - 1, self.dropout,
+                               to_use_tf=self.to_use_tf)
 
         self.g_optimizer = torch.optim.RMSprop(self.G.parameters(), self.g_lr)
         self.d_optimizer = torch.optim.RMSprop(self.D.parameters(), self.d_lr)
