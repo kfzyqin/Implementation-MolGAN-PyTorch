@@ -52,7 +52,7 @@ def get_GAN_config():
     config.mode = 'train'
     config.lambda_wgan = 0.0
     config.lambda_gp = 10.0
-    config.g_lr = config.d_rl = 1e-4
+    config.g_lr = config.d_lr = 1e-4
     config.n_critic = 5
     config.num_epochs = 150
     config.log_step = 1
